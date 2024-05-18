@@ -114,6 +114,79 @@ An element with display: grid becomes a grid container, enabling a grid layout w
 **8. inline-grid**
 An element with display: inline-grid behaves like an inline element but its children are laid out using grid layout.
 
+### Example  
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Example</title>
+  <style>
+    .block-element {
+      display: block;
+      background-color: lightblue;
+      margin-bottom: 10px;
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: lightcoral;
+    }
+
+    .inline-block-element {
+      display: inline-block;
+      background-color: lightgreen;
+      width: 100px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: lightgray;
+    }
+
+    .flex-item {
+      background-color: lightpink;
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: lightyellow;
+    }
+
+    .grid-item {
+      background-color: lightcoral;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="block-element">Block Element</div>
+  <span class="inline-element">Inline Element</span>
+  <span class="inline-element">Inline Element</span>
+  <div class="inline-block-element">Inline-Block Element</div>
+  <div class="inline-block-element">Inline-Block Element</div>
+  
+  <div class="flex-container">
+    <div class="flex-item">Flex Item 1</div>
+    <div class="flex-item">Flex Item 2</div>
+    <div class="flex-item">Flex Item 3</div>
+  </div>
+  
+  <div class="grid-container">
+    <div class="grid-item">Grid Item 1</div>
+    <div class="grid-item">Grid Item 2</div>
+    <div class="grid-item">Grid Item 3</div>
+  </div>
+</body>
+</html>
+```
 
 

@@ -31,3 +31,89 @@
 **padding: 10px;** : Reduces padding on small screens.  
 **font-size: 1.2em;** : Decreases the title's font size for better fit.  
 **font-size: 0.9em;** : Decreases the description's font size for better readability on small screens.
+
+## Position property in css  
+
+There are five different position values:
+**1)static (default)**  
+This is the default value. Elements are positioned according to the normal flow of the document. top, right, bottom, and left properties have no effect.  
+```css
+.element {
+  position: static;
+}
+```
+
+
+**2)relative**
+The element is positioned relative to its normal position. Using top, right, bottom, or left will move the element from its normal position without affecting the layout of surrounding elements.  
+
+```css
+.element {
+  position: relative;
+  top: 10px;  /* Moves the element 10px down from its normal position */
+  left: 20px; /* Moves the element 20px to the right from its normal position */
+}
+```
+
+
+**3)absolute**  
+The element is positioned relative to its nearest positioned ancestor (an ancestor with a position other than static). If no such ancestor exists, it is positioned relative to the initial containing block (usually the <html> element).  
+```css
+.container {
+  position: relative;
+}
+
+.element {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+```
+
+
+**4)fixed**  
+The element is positioned relative to the browser window and will not move when the page is scrolled.  
+```css
+.element {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+```  
+**5)sticky**
+The element is positioned based on the user's scroll position. It toggles between relative and fixed, depending on the scroll position. It is treated as relative until its containing block crosses a specified threshold (defined by top, right, bottom, or left), after which it is treated as fixed.  
+```css
+.element {
+  position: sticky;
+  top: 0; /* The element will be fixed at the top of the container when scrolled to the top */
+}
+```
+
+## Display propertyb in css  
+**1)block**
+An element with display: block takes up the full width available, and each block element starts on a new line.  
+
+**2.) inline**
+An element with display: inline does not start on a new line and only takes up as much width as necessary. It cannot have width or height set.  
+
+**3. inline-block**
+An element with display: inline-block is like an inline element, but it can have width and height set.
+
+**4. none**
+An element with display: none is not displayed at all (it is removed from the document layout).
+
+**5)flex**
+An element with display: flex becomes a flex container, enabling a flexible layout with its children (flex items).  
+
+**6. inline-flex**
+An element with display: inline-flex behaves like an inline element but its children are laid out using flexbox.
+
+**7. grid**
+An element with display: grid becomes a grid container, enabling a grid layout with its children (grid items).
+
+**8. inline-grid**
+An element with display: inline-grid behaves like an inline element but its children are laid out using grid layout.
+
+
+
+
